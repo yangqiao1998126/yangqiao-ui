@@ -1,5 +1,10 @@
 <script setup>
-import demo1 from './demo1.vue'
+import demo1 from './demo1.vue';
+import demo2 from './demo2.vue';
+import demo3 from './demo3.vue';
+import demo4 from './demo4.vue';
+import demo5 from './demo5.vue';
+import demo6 from './demo6.vue';
 import preview from '@/components/preview.vue'
 </script>
 
@@ -23,9 +28,8 @@ import preview from '@/components/preview.vue'
 
 <br/>
 
-[//]: # (<demo2/>)
-
-[//]: # (<preview compName="button" demoName="demo2"/>)
+<demo2/>
+<preview compName="button" demoName="demo2"/>
 
 ## 不同大小
 
@@ -33,9 +37,9 @@ import preview from '@/components/preview.vue'
 
 <br/>
 
-[//]: # (<demo3/>)
+<demo3/>
 
-[//]: # (<preview compName="button" demoName="demo3"/>)
+<preview compName="button" demoName="demo3"/>
 
 ## 图标按钮
 
@@ -43,9 +47,9 @@ import preview from '@/components/preview.vue'
 
 <br/>
 
-[//]: # (<demo4/>)
+<demo4/>
 
-[//]: # (<preview compName="button" demoName="demo4"/>)
+<preview compName="button" demoName="demo4"/>
 
 ## 加载状态
 
@@ -53,19 +57,19 @@ import preview from '@/components/preview.vue'
 
 <br/>
 
-[//]: # (<demo5/>)
+<demo5/>
 
-[//]: # (<preview compName="button" demoName="demo5"/>)
+<preview compName="button" demoName="demo5"/>
 
 ## 自定义颜色
 
-#### 可以自定义颜色的按钮类型——通过设置 _type_ 为 _custom_ 和 _customColor_ 属性设置实现。 tips：需要注意的是 _type_ 为 _default_、_dashed_、_text_ 类型的按钮不支持自定义
+#### 可以自定义颜色的按钮类型——通过设置 _type_ 为 _custom_ 和 _customColor_ 属性设置实现。 
 
 <br/>
 
-[//]: # (<demo6/>)
+<demo6/>
 
-[//]: # (<preview compName="button" demoName="demo6"/>)
+<preview compName="button" demoName="demo6"/>
 
 ## Attributes 参数
 

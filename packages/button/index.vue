@@ -1,5 +1,5 @@
 <template>
-  <button :class="isClass" :style="styles">
+  <button @click="handleClick" :class="isClass" :style="styles">
     <i :class="isIconClass" v-if="leftIcon"></i>
     <span :style="{'margin-left':leftIcon?'4px':'','margin-right':rightIcon?'4px':''}"><slot/></span>
     <i :class="isIconClass" v-if="rightIcon"></i>
@@ -12,6 +12,7 @@ export default {
 </script>
 <script setup>
 import {computed} from 'vue'
+const emits = defineEmits(['click'])
 const props = defineProps({
   type:{
     type:String,
@@ -29,8 +30,12 @@ const props = defineProps({
   },
   leftIcon:String,
   rightIcon:String,
-  localing:Boolean
+  loading:Boolean
 })
+const handleClick = (e) =>{
+  if(props.disabled) return
+  emits('click')
+}
 const mBtnDeaultStyle = {
   background:props.customColor,
   border:props.customColor,
@@ -50,12 +55,12 @@ const isIconClass = computed(()=>{
   return [
     'iconfont',
     props.leftIcon||props.rightIcon,
-    props.localing?props.leftIcon=='m-icon-loading1'||props.leftIcon=='m-icon-loading2'||props.leftIcon=='m-icon-loading3'||props.leftIcon=='m-icon-loading4'||props.leftIcon=='m-icon-loading5'||props.leftIcon=='m-icon-loading6'||props.rightIcon=='m-icon-loading1'||props.rightIcon=='m-icon-loading2'||props.rightIcon=='m-icon-loading3'||props.rightIcon=='m-icon-loading4'||props.rightIcon=='m-icon-loading5'||props.rightIcon=='m-icon-loading6'?'m-icon-loading':'':''
+    props.loading?props.leftIcon=='m-icon-loading1'||props.leftIcon=='m-icon-loading2'||props.leftIcon=='m-icon-loading3'||props.leftIcon=='m-icon-loading4'||props.leftIcon=='m-icon-loading5'||props.leftIcon=='m-icon-loading6'||props.rightIcon=='m-icon-loading1'||props.rightIcon=='m-icon-loading2'||props.rightIcon=='m-icon-loading3'||props.rightIcon=='m-icon-loading4'||props.rightIcon=='m-icon-loading5'||props.rightIcon=='m-icon-loading6'?'m-icon-loading':'':''
   ]
 })
 const styles = computed(()=>{
   return [
-    props.customColor==''?{}:props.type=='default'?{}:mBtnDeaultStyle
+    props.type == 'custom' ? (props.customColor==''?{}:mBtnDeaultStyle) :{}
   ]
 })
 </script>
