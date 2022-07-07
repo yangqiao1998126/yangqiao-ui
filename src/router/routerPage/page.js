@@ -45,6 +45,11 @@ export default [
         component: () => import("/packages/button/doc/doc.md"),
       },
       {
+        path:'input',
+        name:'Input 输入框',
+        component:()=>import('/packages/input/doc/doc.md')
+      },
+      {
         path:"/:carchAll(.*)",
         name:'404',
         component:() => import('../../components/404.vue')

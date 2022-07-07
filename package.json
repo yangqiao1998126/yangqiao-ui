@@ -1,9 +1,9 @@
 {
   "name": "yangqiao-ui",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.4",
   "main": "./dist/yangqiao-ui.umd.js",
-  "module": "./dist/yangqiao-ui.es5.js",
+  "module": "./dist/yangqiao-ui.es.js",
   "exports": {
     ".": {
       "import": "./dist/yangqiao-ui.es.js",
@@ -16,11 +16,7 @@
     "vue3",
     "vuejs",
     "vite",
-    "mzl-ui",
-    "ui",
-    "vueui",
-    "vertical",
-    "horizontal"
+    "ui"
   ],
   "files": [
     "dist/*"
