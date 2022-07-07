@@ -3,7 +3,7 @@
 		<div class="logoBox">
 			<img src="../assets/logo.png" alt="yq-ui" @click="toHome">
 			<a href="javascript:;" @click="toHome">YQ UI</a>
-      <span>V 0.0.1</span>
+      <span>V 0.0.4</span>
       <div class="toolsBox">
         <a href="javascript:;" v-for="(item,index) in tools" :key="index" :class="{active:tabIndex==index}" @click="pageView(item,index)">{{item.name}}</a>
       </div>

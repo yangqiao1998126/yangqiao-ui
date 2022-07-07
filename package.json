@@ -10,6 +10,7 @@
       "require": "./dist/yangqiao-ui.umd.js"
     }
   },
+  "homepage": "https://yangqiao01.github.io/",
   "description": "yangqiao-ui",
   "keywords": [
     "vue",
